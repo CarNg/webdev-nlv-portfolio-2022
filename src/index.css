@@ -6,36 +6,18 @@
 /* Single page section animations CSS */
 .single-page-section-container {
   margin: 0 auto;
+  padding-top: 60px;
 }
 
-.section-content-wrapper {
+.fade-in-component {
   opacity: 0;
   transition: opacity 0.8s ease-in-out 0.3s;
 }
 
-.section-content-wrapper.in-view {
+.fp-viewing-welcome .header-links-wrapper,
+.fp-viewing-welcome .welcome-content-section,
+.fp-viewing-welcome .welcome-arrow-row {
   opacity: 1;
-}
-
-
-.fp-viewing-welcome .section-content-wrapper.welcome-content-section {
-  opacity: 1;
-}
-
-.projectTitleLine {
-  transition: background-color 1s ease-in-out;
-}
-
-.fp-viewing-projects-web-dev .projectTitleLine {
-  background-color: var(--nlv-cyan);
-}
-
-.fp-viewing-projects-digital-games .projectTitleLine {
-  background-color: var(--nlv-red);
-}
-
-.fp-viewing-projects-analog-games .projectTitleLine {
-  background-color: var(--nlv-black);
 }
 
 /* Common functional classes to overwrite existing */
@@ -64,7 +46,7 @@ html, body, #root {
 
 body {
   margin: 0;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -75,10 +57,10 @@ body {
 
 /* Custom Font */
 @font-face {
-  font-family: 'Simplifica';
-  src: url('./assets/fonts/SIMPLIFICA Typeface.ttf'); /* IE9 Compat Modes */
-  src: local('Simplifica'), local('Simplifica'),
-       url('./assets/fonts/SIMPLIFICA Typeface.ttf') format('truetype'), /* Safari, Android, iOS */
+  font-family: 'Novabold';
+  src: url('./assets/fonts/NOVABOLD.otf'); /* IE9 Compat Modes */
+  src: local('Novabold'), local('Novabold'),
+       url('./assets/fonts/NOVABOLD.otf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* Link handling throughout site */

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
-// import Header from '../components/Header/Header'
+import Header from '../components/Header/Header'
 // import About from '../components/Sections/About/About'
 import Welcome from '../components/Welcome/Welcome'
 // import Contact from '../components/Sections/Contact/Contact'
@@ -10,13 +10,13 @@ export default class Main extends Component {
     render(){
         return (
             <React.Fragment>
-                {/* <Header /> */}
+                <Header />
                 
                 <ReactFullpage
                     anchors={['welcome']}
                     sectionsColor={['black']}
                     fitToSectionDelay={800}
-                    menu={'#headerMenu'}
+                    menu={'#header-menu'}
                     slidesNavigation
                     verticalCentered
                     render={comp => (
