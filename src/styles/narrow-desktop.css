@@ -1,0 +1,5 @@
+.header-container,
+.single-page-section-container {
+    max-width: 960px;
+    min-width: 960px;
+}

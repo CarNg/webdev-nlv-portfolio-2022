@@ -1,0 +1,44 @@
+{
+  "name": "nlv-portfolio-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@egjs/react-flicking": "^4.4.3",
+    "@fullpage/react-fullpage": "^0.1.19",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-drag-drawer": "^3.3.4",
+    "react-hamburger-menu": "^1.2.1",
+    "react-image-lightbox": "^5.1.4",
+    "react-responsive": "^8.2.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}

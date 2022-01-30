@@ -1,0 +1,146 @@
+/* Responsive stylesheets */
+@import "../src/styles/wide-desktop.css" screen and (min-width: 1600px);
+@import "../src/styles/narrow-desktop.css" screen and (min-width: 768px) and (max-width: 1599px);
+@import "../src/styles/mobile.css" screen and (max-width: 767px);
+
+/* Single page section animations CSS */
+.single-page-section-container {
+  margin: 0 auto;
+}
+
+.section-content-wrapper {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out 0.3s;
+}
+
+.section-content-wrapper.in-view {
+  opacity: 1;
+}
+
+
+.fp-viewing-welcome .section-content-wrapper.welcome-content-section {
+  opacity: 1;
+}
+
+.projectTitleLine {
+  transition: background-color 1s ease-in-out;
+}
+
+.fp-viewing-projects-web-dev .projectTitleLine {
+  background-color: var(--nlv-cyan);
+}
+
+.fp-viewing-projects-digital-games .projectTitleLine {
+  background-color: var(--nlv-red);
+}
+
+.fp-viewing-projects-analog-games .projectTitleLine {
+  background-color: var(--nlv-black);
+}
+
+/* Common functional classes to overwrite existing */
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* Variables */
+:root {
+  --nlv-black: #212B36;
+  --nlv-red: #E5014D;
+  --nlv-cyan: #00BDAF;
+  --nlv-gray: #E3E3E3;
+  --nlv-white: #F0F0F0;
+}
+
+/* Standard set-up CSS */
+html, body, #root {
+  height: 100%;
+  background-color: var(--nlv-white);
+}
+
+body {
+  margin: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100%;
+}
+
+/* Custom Font */
+@font-face {
+  font-family: 'Simplifica';
+  src: url('./assets/fonts/SIMPLIFICA Typeface.ttf'); /* IE9 Compat Modes */
+  src: local('Simplifica'), local('Simplifica'),
+       url('./assets/fonts/SIMPLIFICA Typeface.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+/* Link handling throughout site */
+a {
+  color: var(--nlv-white);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration-line: underline;
+  text-decoration-color: var(--nlv-cyan);
+}
+
+a.button:hover {
+  text-decoration: none;
+}
+
+/* Common button style throughout site */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: solid 2px var(--nlv-white);
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--nlv-white);
+  text-transform: uppercase;
+  height: 40px;
+  width: 200px;
+}
+
+.button:before{
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/-1);
+  left: calc(2px/-1);
+  background: linear-gradient(to right, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%), linear-gradient(to top, var(--nlv-cyan) 50%, transparent 50%), linear-gradient(to top, var(--nlv-cyan) 50%, transparent 50%), linear-gradient(to right, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%), linear-gradient(to left, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.2s, 0.1s, 0s;
+}
+
+.button:not(.selected):hover:before{
+  background-size:200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position:50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform:scaleX(1) rotate(180deg);
+  transition-delay:0s, 0.1s, 0.2s;
+}
+
+.button.selected {
+  border: 1px solid var(--nlv-cyan);
+}
+
+/* Overwrite packages' classes */
+/* Lightbox */ 
+.ril__caption, .ril__toolbar {
+  background: none !important;
+}

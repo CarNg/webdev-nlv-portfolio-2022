@@ -1,0 +1,129 @@
+#welcome-bkd-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-image: url('../../assets/videos/WelcomeBkd.mp4');
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover; /*cover video background */
+  z-index:3;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  /*
+  * Preventing flicker on some browsers
+  * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+  */
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.welcome-logo-image {
+  width: 600px;
+}
+
+.welcome-title {
+  color: var(--nlv-white);
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0 70px;
+  text-transform: uppercase;
+}
+
+.welcome-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.button:first-child {
+  margin-right: 25px;
+}
+
+.welcome-arrow-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 8px;
+  z-index: 4;
+  width: 100vw;
+}
+
+.welcome-arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.welcome-arrow-row-arrow {
+  width: 12px;
+  animation: bounce 1300ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  height: 10px;
+}
+
+.welcome-arrow-row-arrow-icon {
+  height: 3px;
+  background: var(--nlv-white);
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  border-radius: 5px;
+}
+
+.welcome-arrow-row-arrow-icon:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 100%;
+  border-radius: 15px;
+  background: var(--nlv-white);
+  transform: rotate(-90deg);
+  transform-origin: 0% 100%;
+}
+
+@keyframes bounce {
+50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .welcome-logo-image {
+    width: 300px;
+  }
+
+  .welcome-title {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 13px;
+    width: 180px;
+  }
+
+  .button:first-child {
+    margin-right: 0px;
+  }
+}
+

@@ -1,0 +1,4 @@
+.single-page-section-container {
+    max-width: calc(100% - 35px);
+    min-width: calc(100% - 35px);
+}
