@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './welcome.css';
 import logo from '../../assets/images/landingLogo.png'
 import videoBkd from '../../assets/videos/WelcomeBkd.mp4'
-import resume from '../../assets/files/CarmenNgResume.pdf'
-import MediaQuery from 'react-responsive';
 
 export default class Welcome extends Component {
     render(){
@@ -13,7 +11,7 @@ export default class Welcome extends Component {
                     <source src={videoBkd} type="video/mp4" />
                 </video>
 
-                <div className="single-page-section-container welcome-section">
+                <div className="single-page-section-container">
                     <div className="fade-in-component welcome-content-section">
                         <img src={logo} className='welcome-logo-image'></img>
                         <div className='welcome-title'>Web Developer / Game Designer</div>

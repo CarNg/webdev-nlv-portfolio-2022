@@ -9,6 +9,12 @@
   padding-top: 60px;
 }
 
+@media only screen and (max-width: 767px) {
+  .single-page-section-container {
+    padding-top: 0px;
+  }
+}
+
 .fade-in-component {
   opacity: 0;
   transition: opacity 0.8s ease-in-out 0.3s;
@@ -16,7 +22,9 @@
 
 .fp-viewing-welcome .header-links-wrapper,
 .fp-viewing-welcome .welcome-content-section,
-.fp-viewing-welcome .welcome-arrow-row {
+.fp-viewing-welcome .welcome-arrow-row,
+.fp-viewing-about .header-links-wrapper,
+.fp-viewing-about .about-content-section {
   opacity: 1;
 }
 
@@ -41,14 +49,15 @@
 /* Standard set-up CSS */
 html, body, #root {
   height: 100%;
-  background-color: var(--nlv-white);
+  background-color: black;
 }
 
 body {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Xhers', Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1px;
 }
 
 #root {
@@ -61,6 +70,13 @@ body {
   src: url('./assets/fonts/NOVABOLD.otf'); /* IE9 Compat Modes */
   src: local('Novabold'), local('Novabold'),
        url('./assets/fonts/NOVABOLD.otf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Xhers';
+  src: url('./assets/fonts/Xhers.otf'); /* IE9 Compat Modes */
+  src: local('Xhers'), local('Xhers'),
+       url('./assets/fonts/Xhers.otf') format('truetype'), /* Safari, Android, iOS */
 }
 
 /* Link handling throughout site */
@@ -84,25 +100,27 @@ a.button:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  border: solid 2px var(--nlv-white);
+  border: solid 3px var(--nlv-white);
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
+  font-size: 21px;
+  letter-spacing: 3px;
   color: var(--nlv-white);
   text-transform: uppercase;
-  height: 40px;
+  height: 45px;
   width: 200px;
 }
 
 .button:before{
   content: "";
   position: absolute;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  top: calc(2px/-1);
-  left: calc(2px/-1);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: calc(3px/-1);
+  left: calc(3px/-1);
   background: linear-gradient(to right, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%), linear-gradient(to top, var(--nlv-cyan) 50%, transparent 50%), linear-gradient(to top, var(--nlv-cyan) 50%, transparent 50%), linear-gradient(to right, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%), linear-gradient(to left, var(--nlv-cyan) 0%, var(--nlv-cyan) 100%);
-  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-size: 100% 3px, 3px 200%, 3px 200%, 0% 3px, 0% 3px;
   background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
   background-repeat: no-repeat, no-repeat;
   transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
@@ -111,14 +129,21 @@ a.button:hover {
 }
 
 .button:not(.selected):hover:before{
-  background-size:200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-size:200% 3px, 3px 400%, 3px 400%, 55% 3px, 55% 3px;
   background-position:50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
   transform:scaleX(1) rotate(180deg);
   transition-delay:0s, 0.1s, 0.2s;
 }
 
 .button.selected {
-  border: 1px solid var(--nlv-cyan);
+  border: 3px solid var(--nlv-cyan);
+}
+
+@media only screen and (max-width: 767px) {
+  .button {
+    font-size: 1.15rem;
+    height: 40px;
+  }
 }
 
 /* Overwrite packages' classes */

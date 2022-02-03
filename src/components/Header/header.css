@@ -52,6 +52,7 @@ ul#header-menu {
       background-color: var(--nlv-cyan);
       visibility: visible;
       transform: scale(1);
+      transition: transform 0.8s ease-in-out;
   }
 
   #header-menu > .header-link a:before {
