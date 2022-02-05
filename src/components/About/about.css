@@ -17,7 +17,7 @@
 
 .about-photo-wrapper {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   grid-area: photo;
 }
 
@@ -71,7 +71,6 @@
   flex-direction: column;
   justify-content: center;
   grid-area: blurb;
-  color: var(--nlv-white);
   margin-left: 50px;
   font-size: 25px;
   line-height: 1.25;

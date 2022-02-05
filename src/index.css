@@ -24,7 +24,9 @@
 .fp-viewing-welcome .welcome-content-section,
 .fp-viewing-welcome .welcome-arrow-row,
 .fp-viewing-about .header-links-wrapper,
-.fp-viewing-about .about-content-section {
+.fp-viewing-about .about-content-section,
+.fp-viewing-contact .header-links-wrapper,
+.fp-viewing-contact .contact-content-section {
   opacity: 1;
 }
 
@@ -53,6 +55,7 @@ html, body, #root {
 }
 
 body {
+  color: var(--nlv-white);
   margin: 0;
   font-family: 'Xhers', Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,11 +88,6 @@ a {
   text-decoration: none;
 }
 
-a:hover{
-  text-decoration-line: underline;
-  text-decoration-color: var(--nlv-cyan);
-}
-
 a.button:hover {
   text-decoration: none;
 }
@@ -106,7 +104,6 @@ a.button:hover {
   cursor: pointer;
   font-size: 21px;
   letter-spacing: 3px;
-  color: var(--nlv-white);
   text-transform: uppercase;
   height: 45px;
   width: 200px;
