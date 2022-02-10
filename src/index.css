@@ -26,7 +26,13 @@
 .fp-viewing-about .header-links-wrapper,
 .fp-viewing-about .about-content-section,
 .fp-viewing-contact .header-links-wrapper,
-.fp-viewing-contact .contact-content-section {
+.fp-viewing-contact .contact-content-section,
+.fp-viewing-web-dev .projects-content-section.web-dev,
+.fp-viewing-web-dev .header-links-wrapper,
+.fp-viewing-digital-games .projects-content-section.digital-games,
+.fp-viewing-digital-games .header-links-wrapper,
+.fp-viewing-analog-games .projects-content-section.analog-games,
+.fp-viewing-analog-games .header-links-wrapper {
   opacity: 1;
 }
 

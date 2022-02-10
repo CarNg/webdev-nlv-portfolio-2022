@@ -5,7 +5,7 @@ import Header from '../components/Header/Header'
 import Welcome from '../components/Welcome/Welcome'
 import About from '../components/About/About'
 import Contact from '../components/Contact/Contact'
-// import Projects from '../components/Sections/Projects/Projects'
+import Projects from '../components/Projects/Projects'
 export default class Main extends Component {
     render(){
         return (
@@ -13,16 +13,15 @@ export default class Main extends Component {
                 <Header />
                 
                 <ReactFullpage
-                    anchors={['welcome', 'about', 'contact']}
+                    anchors={['welcome', 'about', 'web-dev', 'digital-games', 'analog-games', 'contact']}
                     fitToSectionDelay={800}
                     menu={'#header-menu'}
-                    slidesNavigation
                     verticalCentered
                     render={comp => (
                         <ReactFullpage.Wrapper>
                             <Welcome moveToAbout={() => comp.fullpageApi.moveSectionDown()} />
                             <About />
-                            {/*<Projects />*/}
+                            <Projects />
                             <Contact /> 
                         </ReactFullpage.Wrapper>
                     )}
