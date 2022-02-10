@@ -13,7 +13,7 @@ export default class Welcome extends Component {
 
                 <div className="single-page-section-container">
                     <div className="fade-in-component welcome-content-section">
-                        <img src={logo} className='welcome-logo-image'></img>
+                        <img src={logo} alt="Night Light Visuals Logo" className='welcome-logo-image'></img>
                         <div className='welcome-title'>Web Developer / Game Designer</div>
                     </div>
                 </div>
