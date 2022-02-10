@@ -7,7 +7,7 @@ import contactLinkedIn from '../../assets/images/contactLinkedIn.png';
 import contactItch from '../../assets/images/contactItch.png';
 import contactGithub from '../../assets/images/contactGithub.png'
 
-export default class Welcome extends Component {
+export default class Contact extends Component {
     render(){
         return (
             <div className="section contact-section">

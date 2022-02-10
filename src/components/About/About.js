@@ -3,7 +3,7 @@ import './about.css';
 import resume from '../../assets/files/CarmenNgResume.pdf'
 
 
-export default class Welcome extends Component {
+export default class About extends Component {
     render(){
         const date = new Date();
         const year = date.getFullYear() - 2016;
