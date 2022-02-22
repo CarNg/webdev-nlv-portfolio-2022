@@ -16,3 +16,20 @@
   font-size:initial;
   border: solid 1px white;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1599px){
+  .projects-grid-container {
+    height: 480px;
+    width: 960px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .projects-grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 200px);
+    margin: 0;
+  }
+}
