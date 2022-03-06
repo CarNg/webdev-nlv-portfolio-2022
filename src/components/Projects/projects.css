@@ -4,39 +4,47 @@
   background-size: cover;
 }
 
+.web-dev > .projects-section-title > .projects-title-line{
+  background-color: var(--nlv-cyan);
+}
+
+.digital-games > .projects-section-title > .projects-title-line{
+  background-color: var(--nlv-red);
+}
+
+.analog-games > .projects-section-title > .projects-title-line{
+  background-color: var(--nlv-white);
+}
+
 .projects-section-title {
-  font-size: 50px;
+  font-size: 35px;
   text-align: center;
-  display: flex;
   align-items: center;
   width: 1200px;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
 }
 
 .projects-title-line {
   flex: 1 1 auto;
-  background-color: var(--nlv-white);
-  height: 4px;
+  height: 3px;
   border: none;
-  margin: 0 40px;
+  margin: 10px 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1599px){
   .projects-section-title {
-    font-size: 40px;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 767px){
   .projects-section-title {
-    font-size: 27px;
+    font-size: 28px;
     width: 100%;
-    margin: 10px auto 30px;
+    margin: 20px auto 20px;
   }
 
   .projects-title-line {
-    height: 2px;
-    margin: 0 15px;
+    margin: 10px 0;
   }
 }
